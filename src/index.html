@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>check 4 DU stats</title>
+        <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+        <link href="style.css" rel="stylesheet" title="default">
+    </head>
+
+    <body>
+        <h3 class="du-title">怼圈统计数据</h3>
+        <button id="du-toggle-filters" value="off">更改 filter</button>
+        <button id="du-copy-table" disabled>复制表格 (HTML)</button>
+        <div class="du-filters">
+            <p>
+                <label for="du-select">选择时间段 (默认全选)</label>
+                <select id="du-select">
+                    <option value="both" selected>Both</option>
+                    <option value="all">全部</option>
+                    <option value="week">本周</option>
+                </select>
+            </p>
+            <div>
+                <label>选择所需数据</label>
+                <label for="cic">
+                    <input checked id="cic" name="du-api-type" type="checkbox"> 
+                    cic : commit times / commit 次数
+                </label>
+                <label for="ccc">
+                    <input checked id="ccc" name="du-api-type" type="checkbox"> 
+                    ccc : commit comment times / commit 评论次数
+                </label>
+                <label for="cil">
+                    <input id="cil" name="du-api-type" type="checkbox"> 
+                    cil : commit lines / commit 行数
+                </label>
+                <label for="ccw">
+                    <input id="ccw" name="du-api-type" type="checkbox"> 
+                    ccw : commit comment words / commit 评论字数
+                </label>
+                <label for="icc">
+                    <input checked id="icc" name="du-api-type" type="checkbox"> 
+                    icc : issue comment times / issue 评论次数
+                </label>
+                <label for="iuc">
+                    <input id="iuc" name="du-api-type" type="checkbox"> 
+                    iuc : issue counts / issue 数 (包括评论)
+                </label>
+                <label for="iuw">
+                    <input id="iuw" name="du-api-type" type="checkbox"> 
+                    iuw : issue words / issue 字数
+                </label>
+                <label for="icw">
+                    <input id="icw" name="du-api-type" type="checkbox"> 
+                    icw : issue comment words / issue 评论字数
+                </label>
+            </div>
+            <button id="du-submit">查询</button>
+        </div>
+        <p id="du-error-msg" />
+        <div class="du-loading"></div>
+        <div id="du-result"></div>
+        <script src="index.js"></script>
+    </body>
+
+</html>

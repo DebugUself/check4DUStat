@@ -1,0 +1,60 @@
+body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    width: 300px;
+}
+
+.du-title {
+    text-align: center;
+}
+
+.du-filters {
+    /*visibility: hidden;*/
+    display: none;
+}
+
+#du-select {
+    width: 150px;
+}
+
+#du-error-msg {
+    /* avoid an excessively wide status text */
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 1rem;
+    color: #FF3030;
+}
+
+#du-error-msg span {
+    margin-left: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+#du-result {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.du-loading {
+    border: 5px solid #f3f3f3;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-top: 5px solid #555;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
