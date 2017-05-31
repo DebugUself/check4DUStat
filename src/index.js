@@ -126,7 +126,7 @@ function generateTableHTML(resArr) {
     return resArr.map(res => {
         const rows = res.data.map((d => {
             return `<tr>
-                <td><a href='http://github.com/${d[0]}'>${d[0]}</a></td>
+                <td><a href='http://github.com/${d[0]}' target='_blank'>${d[0]}</a></td>
                 <td>${d[1]}</td>
             </tr>`;
         }));
