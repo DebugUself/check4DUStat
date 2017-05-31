@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "check4DUStat",
     "description": "check all DU stats by click the btn",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "index.html",
