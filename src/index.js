@@ -126,7 +126,7 @@ function generateTableHTML(resArr) {
     return resArr.map(res => {
         const rows = res.data.map((d => {
             return `<tr>
-                <td><a href='http://github.com/${d[0]}' target='_blank'>${d[0]}</a></td>
+                <td><a href='https://github.com/${d[0]}' target='_blank'>${d[0]}</a></td>
                 <td>${d[1]}</td>
             </tr>`;
         }));
@@ -159,4 +159,10 @@ function notifyMe(msg) {
 
 document.addEventListener('DOMContentLoaded', () => {
     duBtn.click();
+});
+
+chrome.browserAction.onClicked.addListener(() => {
+    chrome.tabs.create({
+        'url': chrome.runtime.getURL('index.html')
+    });
 });
